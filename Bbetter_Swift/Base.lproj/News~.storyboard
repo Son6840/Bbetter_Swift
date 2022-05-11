@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kjx-3U-VDz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Translate-->
+        <scene sceneID="v73-hU-eSg">
+            <objects>
+                <viewController title="Translate" id="gj0-At-eWl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3rW-mp-f8Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xfA-Gi-ZC3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="번역" image="book.closed.fill" catalog="system" selectedImage="book.closed.fill" id="5Me-mi-uhK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tm0-Ln-QYK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97" y="1152"/>
+        </scene>
+        <!--Calender-->
+        <scene sceneID="Wvf-Ro-Yme">
+            <objects>
+                <viewController title="Calender" id="4C4-Ks-XsW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HzG-cM-vvH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JU4-8L-o79"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="달력" image="calendar" catalog="system" selectedImage="calendar" id="Nhe-xs-V9J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Dq-qr-ubp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2229" y="-179"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="FLa-KD-rJi">
+            <objects>
+                <viewController title="News" id="iBJ-EB-On0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5wz-Mc-X9q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkW-ux-VXh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <connections>
+                                    <segue destination="Xfu-6i-3QZ" kind="embed" id="ELk-VK-hO5"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MgB-Ps-1Uy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rkW-ux-VXh" firstAttribute="top" secondItem="MgB-Ps-1Uy" secondAttribute="top" id="1mn-kH-psz"/>
+                            <constraint firstItem="rkW-ux-VXh" firstAttribute="leading" secondItem="MgB-Ps-1Uy" secondAttribute="leading" id="2cI-X8-m3R"/>
+                            <constraint firstItem="MgB-Ps-1Uy" firstAttribute="trailing" secondItem="rkW-ux-VXh" secondAttribute="trailing" id="2w2-zn-2eT"/>
+                            <constraint firstItem="MgB-Ps-1Uy" firstAttribute="bottom" secondItem="rkW-ux-VXh" secondAttribute="bottom" id="Uuq-hq-yqB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="뉴스" image="newspaper" catalog="system" selectedImage="newspaper" id="hmY-Q2-hcg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vg-xd-UKt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80" y="-270"/>
+        </scene>
+        <!--Tab-->
+        <scene sceneID="hhl-Zu-Rl5">
+            <objects>
+                <tabBarController title="Tab" id="Kjx-3U-VDz" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cF6-wQ-y7U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4C4-Ks-XsW" kind="relationship" relationship="viewControllers" id="VuW-pk-otY"/>
+                        <segue destination="X1P-ki-Yb4" kind="relationship" relationship="viewControllers" id="5v6-B6-P1j"/>
+                        <segue destination="iBJ-EB-On0" kind="relationship" relationship="viewControllers" id="k9U-jE-wK4"/>
+                        <segue destination="gj0-At-eWl" kind="relationship" relationship="viewControllers" id="2vN-sB-JMf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pgb-Dc-guY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1157" y="427"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="0mI-Wu-gdz">
+            <objects>
+                <tableViewController id="pLk-VQ-a6X" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="m19-Fa-2Zf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mn8-Il-edw">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mn8-Il-edw" id="28Y-IG-8u7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pLk-VQ-a6X" id="Ewh-1D-Kdx"/>
+                            <outlet property="delegate" destination="pLk-VQ-a6X" id="PXd-KI-TfQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="J32-0w-UHu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpa-ie-YFr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2841" y="1152"/>
+        </scene>
+        <!--Goal-->
+        <scene sceneID="5P4-pk-KEm">
+            <objects>
+                <navigationController title="Goal" id="X1P-ki-Yb4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="목표" image="list.bullet" catalog="system" selectedImage="list.bullet" id="zY4-cj-cMJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TeJ-zS-j0h">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pLk-VQ-a6X" kind="relationship" relationship="rootViewController" id="xm2-EC-cnN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P80-SM-KfQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="1152"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="b6b-9G-tBb">
+            <objects>
+                <viewController id="Xfu-6i-3QZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DuX-rd-9gT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48m-0E-Ely" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-657" y="-278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.closed.fill" catalog="system" width="115" height="128"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
