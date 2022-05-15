@@ -45,16 +45,43 @@
             </objects>
             <point key="canvasLocation" x="4192.753623188406" y="-228.34821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Entry View Controller-->
         <scene sceneID="sfC-kl-tfI">
             <objects>
-                <viewController id="5FU-qc-cCW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="enter" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5FU-qc-cCW" customClass="EntryViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fep-Oh-QYT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2St-jh-F4p">
+                                <rect key="frame" x="0.0" y="114" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Zty-G4-rqo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-7z-b2I">
+                                <rect key="frame" x="0.0" y="544" width="414" height="216"/>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q5k-Zw-6fg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2St-jh-F4p" firstAttribute="top" secondItem="Q5k-Zw-6fg" secondAttribute="top" constant="70" id="3P9-Ii-A61"/>
+                            <constraint firstItem="NCK-7z-b2I" firstAttribute="top" secondItem="2St-jh-F4p" secondAttribute="bottom" constant="30" id="9Lo-2x-erV"/>
+                            <constraint firstItem="NCK-7z-b2I" firstAttribute="leading" secondItem="Q5k-Zw-6fg" secondAttribute="leading" id="Age-Uq-tiB"/>
+                            <constraint firstItem="NCK-7z-b2I" firstAttribute="trailing" secondItem="Q5k-Zw-6fg" secondAttribute="trailing" id="HTn-lv-Bw6"/>
+                            <constraint firstItem="Q5k-Zw-6fg" firstAttribute="trailing" secondItem="2St-jh-F4p" secondAttribute="trailing" id="gm8-SF-usc"/>
+                            <constraint firstItem="2St-jh-F4p" firstAttribute="leading" secondItem="Q5k-Zw-6fg" secondAttribute="leading" id="jee-yy-Hgx"/>
+                            <constraint firstItem="NCK-7z-b2I" firstAttribute="trailing" secondItem="Q5k-Zw-6fg" secondAttribute="trailing" id="mRt-n5-ybP"/>
+                            <constraint firstItem="NCK-7z-b2I" firstAttribute="leading" secondItem="Q5k-Zw-6fg" secondAttribute="leading" id="oq9-r1-39z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="NCK-7z-b2I" id="joJ-wL-pM5"/>
+                        <outlet property="textField" destination="2St-jh-F4p" id="MFx-dO-Dn9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4d-77-iF9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

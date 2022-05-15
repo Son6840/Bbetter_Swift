@@ -56,7 +56,20 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
         vc.completionHandler = { [weak self] in
             self?.refresh()
             
+        }
+        
+        vc.title = "New Item"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func refresh(){
+        data = realm.objects(ToDoListItem.self).map({ $0 })
+        table.reloadData()
+    }
+            
+            
             
         }
 
-}
+
