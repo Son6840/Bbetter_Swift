@@ -87,16 +87,42 @@
             </objects>
             <point key="canvasLocation" x="4954" y="-228"/>
         </scene>
-        <!--View Controller-->
+        <!--View View Controller-->
         <scene sceneID="Bxe-L9-Yox">
             <objects>
-                <viewController id="407-k1-Xyy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view" id="407-k1-Xyy" customClass="ViewViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tz5-WZ-zem">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEB-SA-WZp">
+                                <rect key="frame" x="20" y="54" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItI-7W-sbd">
+                                <rect key="frame" x="20" y="105" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cbs-VB-U4C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cbs-VB-U4C" firstAttribute="trailing" secondItem="YEB-SA-WZp" secondAttribute="trailing" constant="20" id="FRc-Np-iqC"/>
+                            <constraint firstItem="ItI-7W-sbd" firstAttribute="leading" secondItem="cbs-VB-U4C" secondAttribute="leading" constant="20" id="Gok-Qx-gry"/>
+                            <constraint firstItem="ItI-7W-sbd" firstAttribute="top" secondItem="YEB-SA-WZp" secondAttribute="bottom" constant="30" id="I8E-yD-aQv"/>
+                            <constraint firstItem="cbs-VB-U4C" firstAttribute="trailing" secondItem="ItI-7W-sbd" secondAttribute="trailing" constant="20" id="f9K-IC-GwD"/>
+                            <constraint firstItem="YEB-SA-WZp" firstAttribute="top" secondItem="cbs-VB-U4C" secondAttribute="top" constant="10" id="ff1-Ak-yXW"/>
+                            <constraint firstItem="YEB-SA-WZp" firstAttribute="leading" secondItem="cbs-VB-U4C" secondAttribute="leading" constant="20" id="naC-ux-si8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="YEB-SA-WZp" id="EIX-93-Kdc"/>
+                        <outlet property="itemlabel" destination="ItI-7W-sbd" id="Wkx-1m-zeC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ7-Fv-MXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
