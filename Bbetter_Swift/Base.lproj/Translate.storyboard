@@ -8,17 +8,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Translate View Controller-->
         <scene sceneID="jD8-hf-rQM">
             <objects>
-                <viewController storyboardIdentifier="translate" id="63q-aE-jIY" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytm-0x-xRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="translate" id="63q-aE-jIY" customClass="TranslateViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yjq-q7-1Fz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="oefak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCe-fk-3Os">
-                                <rect key="frame" x="95" y="250" width="43" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rKJ-NO-1fE">
+                                <rect key="frame" x="30" y="239" width="352" height="145"/>
+                                <color key="backgroundColor" white="0.77502101229999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="7r7-PS-qpW"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfE-mc-pCI">
+                                <rect key="frame" x="30" y="544" width="350" height="145"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="dM9-Pb-fyh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,14 +40,28 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HOO-Vn-jyd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lfE-mc-pCI" firstAttribute="leading" secondItem="HOO-Vn-jyd" secondAttribute="leading" constant="30" id="23J-qk-Lhi"/>
+                            <constraint firstItem="lfE-mc-pCI" firstAttribute="trailing" secondItem="rKJ-NO-1fE" secondAttribute="trailing" constant="-2" id="PTe-5r-CzF"/>
+                            <constraint firstItem="rKJ-NO-1fE" firstAttribute="leading" secondItem="yjq-q7-1Fz" secondAttribute="leading" constant="30" id="RAQ-xS-bY7"/>
+                            <constraint firstItem="HOO-Vn-jyd" firstAttribute="bottom" secondItem="lfE-mc-pCI" secondAttribute="bottom" constant="173" id="RhU-tT-aX8"/>
+                            <constraint firstItem="rKJ-NO-1fE" firstAttribute="top" secondItem="HOO-Vn-jyd" secondAttribute="top" constant="195" id="aS2-sh-1aC"/>
+                            <constraint firstAttribute="trailing" secondItem="rKJ-NO-1fE" secondAttribute="trailing" constant="32" id="g3v-US-3m7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchText1" destination="rKJ-NO-1fE" id="tvv-jE-bQb"/>
+                        <outlet property="textLabel1" destination="lfE-mc-pCI" id="59B-HA-vmC"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ytm-0x-xRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-913.04347826086962" y="1151.7857142857142"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
