@@ -17,7 +17,13 @@
 		289C0E7D282BAAA7004D029C /* Calender.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289C0E7B282BAAA7004D029C /* Calender.storyboard */; };
 		289C0E82282BABE5004D029C /* Translate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289C0E80282BABE5004D029C /* Translate.storyboard */; };
 		289C0E84282BAD29004D029C /* Goal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 289C0E83282BAD29004D029C /* Goal.storyboard */; };
+
+		289C0E8628313BAF004D029C /* GoalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C0E8528313BAF004D029C /* GoalController.swift */; };
+		289C0E8828314047004D029C /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C0E8728314047004D029C /* EntryViewController.swift */; };
+		289C0E8A28314060004D029C /* ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C0E8928314060004D029C /* ViewViewController.swift */; };
+
 		79B430F42833ABE1004F5BEB /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B430F32833ABE1004F5BEB /* TranslateViewController.swift */; };
+
 		E6AD0725FE233D70BC4BEDCB /* Pods_Bbetter_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E66998678ABC769E4FC243 /* Pods_Bbetter_Swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +40,9 @@
 		289C0E7C282BAAA7004D029C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Calender.storyboard; sourceTree = "<group>"; };
 		289C0E81282BABE5004D029C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Translate.storyboard; sourceTree = "<group>"; };
 		289C0E83282BAD29004D029C /* Goal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goal.storyboard; sourceTree = SOURCE_ROOT; };
+		289C0E8528313BAF004D029C /* GoalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalController.swift; sourceTree = "<group>"; };
+		289C0E8728314047004D029C /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		289C0E8928314060004D029C /* ViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewViewController.swift; sourceTree = "<group>"; };
 		34C2D69951C2A9CCBCD29AD8 /* Pods-Bbetter_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bbetter_Swift.release.xcconfig"; path = "Target Support Files/Pods-Bbetter_Swift/Pods-Bbetter_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		79B430F32833ABE1004F5BEB /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		C8E66998678ABC769E4FC243 /* Pods_Bbetter_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bbetter_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +103,9 @@
 				286B1D38282BA3EB00308A66 /* Assets.xcassets */,
 				286B1D3A282BA3EB00308A66 /* LaunchScreen.storyboard */,
 				286B1D3D282BA3EB00308A66 /* Info.plist */,
+				289C0E8528313BAF004D029C /* GoalController.swift */,
+				289C0E8728314047004D029C /* EntryViewController.swift */,
+				289C0E8928314060004D029C /* ViewViewController.swift */,
 			);
 			path = Bbetter_Swift;
 			sourceTree = "<group>";
@@ -226,8 +238,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				286B1D34282BA3EA00308A66 /* ViewController.swift in Sources */,
+
+				289C0E8828314047004D029C /* EntryViewController.swift in Sources */,
 				79B430F42833ABE1004F5BEB /* TranslateViewController.swift in Sources */,
+
 				286B1D30282BA3EA00308A66 /* AppDelegate.swift in Sources */,
+				289C0E8A28314060004D029C /* ViewViewController.swift in Sources */,
+				289C0E8628313BAF004D029C /* GoalController.swift in Sources */,
 				286B1D32282BA3EA00308A66 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
