@@ -41,36 +41,11 @@ class CalenderViewController: UIViewController {
         for item2 in list{
             itemLabel?.text! = "\(item2.item)"
         }
-        
-        print(type(of: date))
-       print(date)
-//        let list2 = realm.objects(diaryItem.self).filter("date == date")
-        
-       
-    //    itemLabel.text = realm.objects(diaryItem.self).filter("date == 2022-05-22 10:49:09 +0000")
-      //  let a = realm.objects(diaryItem.self).filter("item == 'hi'")
-       // print(a)
-       // var parseItem = String()
-       // parseItem += "\(a)"
- //       itemLabel.text = "\(a.item)"
-        
-       
-        
-        
-        
-//        let list = realm.objects(diaryItem.self).filter("date == 'hi'")
-//        let list2 = realm.objects(diaryItem.self)
-//        print(list2)
-//        if list.count == 0{
-//            itemLabel?.text = ""
-//        }
-//        for item2 in list{
-//            itemLabel?.text! += "\(item2.date)"
-//        }
+
         let tap = UITapGestureRecognizer(target: self, action: #selector(CalenderViewController.tapItemLabel))
         itemLabel.isUserInteractionEnabled = true
         itemLabel.addGestureRecognizer(tap)
-        // Do any additional setup after loading the view.
+
     }
     
     @objc func tapItemLabel(sender:UITapGestureRecognizer){
@@ -79,11 +54,6 @@ class CalenderViewController: UIViewController {
             return
         }
         vc.dataDate = date
-     
-        
-//        vc.date = self.date ?? ""
-        
-    
         vc.navigationItem.largeTitleDisplayMode = .never
       
         navigationController?.pushViewController(vc, animated: true)
@@ -99,31 +69,12 @@ class CalenderViewController: UIViewController {
         
         if list.count == 0{
             itemLabel?.text! = "내용을 입력해주세요"
-//            realm.beginWrite()
-//            let newItem = diaryItem()
-//            newItem.date = date
-//            realm.add(newItem)
-//
-//            try! realm.commitWrite()
         }else{
             for item2 in list{
                 itemLabel?.text! = "\(item2.item)"
             }
         }
 
-        print(list)
-
-       
-
-      
-        print(type(of: date))
-        print(date)
-    }
-    func refresh(){
-        let list = realm.objects(diaryItem.self).filter("date == '\(date)'")
-        for item2 in list{
-            itemLabel?.text! = "\(item2.item)"
-        }
     }
     }
     

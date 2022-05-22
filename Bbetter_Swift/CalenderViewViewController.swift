@@ -19,8 +19,6 @@ class CalenderViewViewController: UIViewController, UITextFieldDelegate {
     
     public var item: diaryItem?
     @IBOutlet var itemTextField: UITextField!
-    public var refresh: (() -> Void)?
-
     var dataDate: String = ""
     
     
