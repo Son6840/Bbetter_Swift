@@ -11,10 +11,19 @@
         <!--news-->
         <scene sceneID="b6b-9G-tBb">
             <objects>
-                <viewController storyboardIdentifier="news" title="news" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xfu-6i-3QZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="news" title="news" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xfu-6i-3QZ" customClass="NewsController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DuX-rd-9gT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01i-DO-thP">
+                                <rect key="frame" x="186" y="301" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gEY-eL-gA2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
