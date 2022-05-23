@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YxA-kB-lC8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qZ4-3v-3ir">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,18 +8,109 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--일기-->
         <scene sceneID="JOc-jU-qXK">
             <objects>
-                <viewController storyboardIdentifier="calender" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YxA-kB-lC8" customClass="ViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calender" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YxA-kB-lC8" customClass="CalenderViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KOi-9M-qs0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="Rvj-1i-ZdN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="374"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="didDatePickerValueChanged:" destination="YxA-kB-lC8" eventType="valueChanged" id="cHa-PR-XtG"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용을 입력해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH6-RW-ucc">
+                                <rect key="frame" x="0.0" y="462" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="1hW-D1-pnI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fSl-UN-Y1I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Rvj-1i-ZdN" secondAttribute="trailing" id="UPs-r2-5ao"/>
+                            <constraint firstItem="Rvj-1i-ZdN" firstAttribute="leading" secondItem="fSl-UN-Y1I" secondAttribute="leading" id="Z4l-Sb-twk"/>
+                            <constraint firstItem="CH6-RW-ucc" firstAttribute="top" secondItem="Rvj-1i-ZdN" secondAttribute="bottom" id="blL-1p-bZa"/>
+                            <constraint firstItem="fSl-UN-Y1I" firstAttribute="trailing" secondItem="CH6-RW-ucc" secondAttribute="trailing" id="hNj-xW-4oo"/>
+                            <constraint firstItem="Rvj-1i-ZdN" firstAttribute="top" secondItem="fSl-UN-Y1I" secondAttribute="top" id="kHn-sP-chV"/>
+                            <constraint firstItem="fSl-UN-Y1I" firstAttribute="bottom" secondItem="CH6-RW-ucc" secondAttribute="bottom" id="oLs-or-hEc"/>
+                            <constraint firstItem="CH6-RW-ucc" firstAttribute="leading" secondItem="fSl-UN-Y1I" secondAttribute="leading" id="y4Y-QO-Yby"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="일기" id="Tgr-PJ-sm0"/>
+                    <connections>
+                        <outlet property="datePicker" destination="Rvj-1i-ZdN" id="CZM-OR-gEi"/>
+                        <outlet property="itemLabel" destination="CH6-RW-ucc" id="aDo-WN-Juv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1n-Os-5Qw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3905.7971014492755" y="-200.22321428571428"/>
+        </scene>
+        <!--Calender View View Controller-->
+        <scene sceneID="uab-Hm-9dr">
+            <objects>
+                <viewController storyboardIdentifier="view" id="3E1-3i-3bW" customClass="CalenderViewViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K9b-Bo-Sfc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lXg-SP-Rx0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGi-jN-Apn">
+                                <rect key="frame" x="0.0" y="54" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PXV-Ts-hbj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PXV-Ts-hbj" firstAttribute="trailing" secondItem="lXg-SP-Rx0" secondAttribute="trailing" id="93q-cR-YD2"/>
+                            <constraint firstItem="RGi-jN-Apn" firstAttribute="top" secondItem="PXV-Ts-hbj" secondAttribute="top" constant="10" id="EKR-mo-ca7"/>
+                            <constraint firstItem="PXV-Ts-hbj" firstAttribute="trailing" secondItem="RGi-jN-Apn" secondAttribute="trailing" id="Sx9-a7-C7c"/>
+                            <constraint firstItem="lXg-SP-Rx0" firstAttribute="leading" secondItem="PXV-Ts-hbj" secondAttribute="leading" id="UR6-WA-jIX"/>
+                            <constraint firstItem="RGi-jN-Apn" firstAttribute="leading" secondItem="PXV-Ts-hbj" secondAttribute="leading" id="jmW-x0-yTv"/>
+                            <constraint firstItem="PXV-Ts-hbj" firstAttribute="bottom" secondItem="lXg-SP-Rx0" secondAttribute="bottom" id="p42-l7-itd"/>
+                            <constraint firstItem="lXg-SP-Rx0" firstAttribute="top" secondItem="PXV-Ts-hbj" secondAttribute="top" id="p6G-nj-Zv1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="RGi-jN-Apn" id="2a1-0R-OEM"/>
+                        <outlet property="itemTextField" destination="lXg-SP-Rx0" id="85c-vt-WG8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5u4-f4-l68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4571" y="-252"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZyG-gN-TN9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qZ4-3v-3ir" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="txk-Tz-juR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YxA-kB-lC8" kind="relationship" relationship="rootViewController" id="ppf-Qf-RpH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rn0-mY-Ofn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2995.6521739130435" y="-200.22321428571428"/>
         </scene>
