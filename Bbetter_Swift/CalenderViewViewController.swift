@@ -19,7 +19,9 @@ class CalenderViewViewController: UIViewController, UITextFieldDelegate {
     
     public var item: diaryItem?
     @IBOutlet var itemTextField: UITextField!
+    @IBOutlet var dateLabel: UILabel!
     var dataDate: String = ""
+    var labelItem: String = ""
     
     
 
@@ -40,6 +42,9 @@ class CalenderViewViewController: UIViewController, UITextFieldDelegate {
         
         itemTextField.becomeFirstResponder()
         itemTextField.delegate = self
+       
+        dateLabel?.text! = self.dataDate
+        itemTextField?.text! = self.labelItem
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .done, target: self, action: #selector(didTapCheckButton))
     }

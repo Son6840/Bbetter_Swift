@@ -30,7 +30,11 @@ class CalenderViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let list = realm.objects(diaryItem.self).filter("date == '\(date)'")
         for item2 in list{
+            if "\(item2.item)" == ""{
+                itemLabel?.text! = "내용을 입력해주세요"
+            }else{
             itemLabel?.text! = "\(item2.item)"
+        }
         }
     }
 
@@ -54,6 +58,14 @@ class CalenderViewController: UIViewController {
             return
         }
         vc.dataDate = date
+        
+        if itemLabel?.text == "내용을 입력해주세요" {
+            vc.labelItem = ""
+        }else{
+            vc.labelItem = itemLabel?.text ?? ""
+        }
+       
+        
         vc.navigationItem.largeTitleDisplayMode = .never
       
         navigationController?.pushViewController(vc, animated: true)
@@ -70,8 +82,13 @@ class CalenderViewController: UIViewController {
         if list.count == 0{
             itemLabel?.text! = "내용을 입력해주세요"
         }else{
+           
             for item2 in list{
+                if "\(item2.item)" == ""{
+                    itemLabel?.text! = "내용을 입력해주세요"
+                }else{
                 itemLabel?.text! = "\(item2.item)"
+            }
             }
         }
 
