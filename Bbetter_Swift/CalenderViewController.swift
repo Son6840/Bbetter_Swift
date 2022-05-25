@@ -18,6 +18,8 @@ class CalenderViewController: UIViewController {
     var date = dateFormatter.string(from: Date())
     
     
+    
+    
     private let realm = try! Realm()
  
     static let dateFormatter: DateFormatter = {

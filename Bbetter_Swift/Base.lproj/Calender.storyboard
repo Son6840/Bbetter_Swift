@@ -36,6 +36,8 @@
                         <viewLayoutGuide key="safeArea" id="fSl-UN-Y1I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Rvj-1i-ZdN" firstAttribute="trailing" secondItem="fSl-UN-Y1I" secondAttribute="trailing" id="4DN-Bt-Bfo"/>
+                            <constraint firstItem="Rvj-1i-ZdN" firstAttribute="leading" secondItem="fSl-UN-Y1I" secondAttribute="leading" id="OJR-Lp-8Xr"/>
                             <constraint firstAttribute="trailing" secondItem="Rvj-1i-ZdN" secondAttribute="trailing" id="UPs-r2-5ao"/>
                             <constraint firstItem="Rvj-1i-ZdN" firstAttribute="leading" secondItem="fSl-UN-Y1I" secondAttribute="leading" id="Z4l-Sb-twk"/>
                             <constraint firstItem="CH6-RW-ucc" firstAttribute="top" secondItem="Rvj-1i-ZdN" secondAttribute="bottom" id="blL-1p-bZa"/>
