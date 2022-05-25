@@ -8,4 +8,5 @@ target 'Bbetter_Swift' do
   # Pods for Bbetter_Swift
 	pod 'RealmSwift'
 	pod 'SwiftSoup'
+	pod 'KakaoSDK'
 end

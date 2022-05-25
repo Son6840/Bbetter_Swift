@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kjx-3U-VDz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MPJ-A1-OhG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -131,7 +131,8 @@
         <!--Tab-->
         <scene sceneID="hhl-Zu-Rl5">
             <objects>
-                <tabBarController title="Tab" id="Kjx-3U-VDz" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="main" title="Tab" id="Kjx-3U-VDz" customClass="MainViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1Z7-ZN-9eD"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cF6-wQ-y7U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -146,7 +147,34 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgb-Dc-guY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157" y="427"/>
+            <point key="canvasLocation" x="2066.666666666667" y="426.5625"/>
+        </scene>
+        <!--Kakao View Controller-->
+        <scene sceneID="FCo-KM-gGn">
+            <objects>
+                <viewController id="2N0-tE-9mS" customClass="KakaoViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C8p-eu-LgB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtN-Ch-AZW">
+                                <rect key="frame" x="155" y="520" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="onKakaoLoginByAppTouched:" destination="2N0-tE-9mS" eventType="touchUpInside" id="Rz8-pF-j2Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a0Y-uN-8oI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dD4-sJ-pSq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYa-I7-WKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313.0434782608697" y="457.36607142857139"/>
         </scene>
         <!--news-->
         <scene sceneID="KyW-rn-Pp7">
@@ -179,6 +207,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iNq-xX-MqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3283" y="-228"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cPd-OY-bjU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MPJ-A1-OhG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U0h-JE-ql8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2N0-tE-9mS" kind="relationship" relationship="rootViewController" id="xw4-2V-sFl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tBm-FR-fAS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402.89855072463769" y="457.36607142857139"/>
         </scene>
     </scenes>
     <resources>
