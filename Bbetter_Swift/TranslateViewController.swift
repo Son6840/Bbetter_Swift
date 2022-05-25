@@ -11,6 +11,8 @@ class TranslateViewController: UIViewController, UITextFieldDelegate, UITextView
     
     @IBOutlet  var searchText1: UITextView!
     @IBOutlet  var textLabel1: UILabel!
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
