@@ -16,9 +16,15 @@ class TranslateViewController: UIViewController, UITextFieldDelegate, UITextView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         self.searchText1.delegate = self
         self.searchText1.refreshControl?.addTarget(self, action: #selector(textViewDidChange(_:)), for: .editingChanged) //실시간입력 되었을때 번역함수 호출
         self.textLabel1.numberOfLines = 0
+        
+        
+        
 
 
         // Do any additional setup after loading the view.

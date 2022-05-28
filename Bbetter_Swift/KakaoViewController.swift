@@ -11,13 +11,20 @@ import KakaoSDKAuth
 import KakaoSDKUser
 
 class KakaoViewController: UIViewController {
-    @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var profileImageView: UIImageView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    @IBAction func onClickNoneLoginButton(){
+        guard let vc = storyboard?.instantiateViewController(identifier: "main") as? MainViewController else{
+            return
+        }
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+//        navigationController?.pushViewController(vc, animated: true)
+        self.present(vc, animated: true ,completion: nil)
+    }
     @IBAction func onKakaoLoginByAppTouched(_ sender: Any) {
      // 카카오톡 설치 여부 확인
         if (UserApi.isKakaoTalkLoginAvailable()) {

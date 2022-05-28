@@ -72,7 +72,7 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
         
-        vc.title = "New Item"
+        vc.title = "목표 추가"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
     }
