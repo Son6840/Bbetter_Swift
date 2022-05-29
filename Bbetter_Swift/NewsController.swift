@@ -39,7 +39,7 @@ class NewsController:  TabmanViewController{
         
         let tBar = TMBar.ButtonBar()
         tBar.layout.transitionStyle = .snap
-        tBar.layout.contentInset = UIEdgeInsets(top: 0.0, left: 20.0, bottom: 0.0, right: 20.0)
+        //tBar.layout.contentInset = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 20.0)
         tBar.buttons.customize{(button) in
             button.tintColor = .gray
             button.selectedTintColor = .black

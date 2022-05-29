@@ -33,8 +33,8 @@ class newsIT_ViewController: UIViewController, UITableViewDelegate, UITableViewD
                // let target = newsTitle[indexPath.row]
                  
                 do{
-                    cell.nTl?.text = try "\(newsTitle[indexPath.row].text())"
-                    cell.time?.text = try "\(newsTime[indexPath.row].text())"
+                    cell.itTitle?.text = try "\(newsTitle[indexPath.row].text())"
+                    cell.itTime?.text = try "\(newsTime[indexPath.row].text())"
                 }catch{}
                 return cell
                 
