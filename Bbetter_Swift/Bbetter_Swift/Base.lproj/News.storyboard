@@ -15,51 +15,115 @@
                     <view key="view" contentMode="scaleToFill" id="DuX-rd-9gT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OG4-am-iPz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="yIb-Xd-O8J" style="IBUITableViewCellStyleDefault" id="Bwc-HA-Igz">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bwc-HA-Igz" id="KoT-zU-MtC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yIb-Xd-O8J">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="DuX-rd-9gT" id="opC-AY-I2Y"/>
-                                    <outlet property="delegate" destination="DuX-rd-9gT" id="P3T-Hm-OAy"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gEY-eL-gA2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="gEY-eL-gA2" firstAttribute="trailing" secondItem="OG4-am-iPz" secondAttribute="trailing" id="Apf-bN-wNV"/>
-                            <constraint firstItem="OG4-am-iPz" firstAttribute="leading" secondItem="gEY-eL-gA2" secondAttribute="leading" id="Zxk-58-KEH"/>
-                            <constraint firstItem="OG4-am-iPz" firstAttribute="top" secondItem="gEY-eL-gA2" secondAttribute="top" id="dAF-sC-jEn"/>
-                            <constraint firstItem="gEY-eL-gA2" firstAttribute="bottom" secondItem="OG4-am-iPz" secondAttribute="bottom" id="gBd-vR-np2"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="table" destination="OG4-am-iPz" id="tbh-nL-G1s"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48m-0E-Ely" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-657" y="-278"/>
+        </scene>
+        <!--News Social View Controller-->
+        <scene sceneID="jeb-Ts-9Ka">
+            <objects>
+                <viewController storyboardIdentifier="newsSocial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ked-yl-sGc" customClass="newsSocial_ViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lWf-y0-uIg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CTD-IK-DRd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sM0-Yb-8uZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658" y="377"/>
+        </scene>
+        <!--News Economy View Controller-->
+        <scene sceneID="Ze2-cg-p2g">
+            <objects>
+                <viewController storyboardIdentifier="newsEconomy" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Mo-9X-P0e" customClass="newsEconomyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AR6-nW-FM5" customClass="news">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Tn6-Mh-gxm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2x-1f-bj3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="376"/>
+        </scene>
+        <!--News Politics View Controller-->
+        <scene sceneID="Ihi-7b-qMf">
+            <objects>
+                <viewController storyboardIdentifier="newsPolitics" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r2i-bM-Mc3" customClass="newsPolitics_ViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JwS-EM-01b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vcu-Fn-wvI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D3u-hd-QyC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="376"/>
+        </scene>
+        <!--News Culture View Controller-->
+        <scene sceneID="LXD-Es-ZdX">
+            <objects>
+                <viewController storyboardIdentifier="newsCulture" useStoryboardIdentifierAsRestorationIdentifier="YES" id="soW-uc-9Og" customClass="newsCulture_ViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S97-xi-eqG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="w7U-3i-tBd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wya-PG-MZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="1081"/>
+        </scene>
+        <!--NewsIT View Controller-->
+        <scene sceneID="vEu-KS-8bW">
+            <objects>
+                <viewController storyboardIdentifier="newsIT" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MGE-kJ-CHp" customClass="newsIT_ViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3o5-yU-IaI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5d7-LJ-ZZC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8d0-oN-8D2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8d0-oN-8D2" firstAttribute="bottom" secondItem="5d7-LJ-ZZC" secondAttribute="bottom" id="4d5-2z-GFe"/>
+                            <constraint firstItem="5d7-LJ-ZZC" firstAttribute="top" secondItem="8d0-oN-8D2" secondAttribute="top" id="Lie-zP-Omu"/>
+                            <constraint firstItem="5d7-LJ-ZZC" firstAttribute="leading" secondItem="8d0-oN-8D2" secondAttribute="leading" id="Nyf-GW-wO5"/>
+                            <constraint firstItem="8d0-oN-8D2" firstAttribute="trailing" secondItem="5d7-LJ-ZZC" secondAttribute="trailing" id="oLS-Bm-Pw8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJ0-w2-Dkr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="1081"/>
+        </scene>
+        <!--News National View Controller-->
+        <scene sceneID="EfT-7w-Enp">
+            <objects>
+                <viewController storyboardIdentifier="newsNational" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6PJ-Ul-fU2" customClass="newsNational_ViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UQp-eY-4ML">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="R0a-34-fN7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iye-oZ-DXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658" y="1081"/>
         </scene>
     </scenes>
     <resources>
