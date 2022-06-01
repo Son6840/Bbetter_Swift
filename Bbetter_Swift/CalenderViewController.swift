@@ -51,6 +51,7 @@ class CalenderViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(CalenderViewController.tapItemLabel))
         itemLabel.isUserInteractionEnabled = true
         itemLabel.addGestureRecognizer(tap)
+        self.itemLabel.numberOfLines = 0
 
     }
     
