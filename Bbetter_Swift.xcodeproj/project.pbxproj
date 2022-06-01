@@ -20,6 +20,10 @@
 		289C0E8628313BAF004D029C /* GoalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C0E8528313BAF004D029C /* GoalController.swift */; };
 		289C0E8828314047004D029C /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C0E8728314047004D029C /* EntryViewController.swift */; };
 		289C0E8A28314060004D029C /* ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C0E8928314060004D029C /* ViewViewController.swift */; };
+		79294223283DF0EC0026258C /* KakaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79294222283DF0EC0026258C /* KakaoViewController.swift */; };
+		79294225283DFA590026258C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79294224283DFA590026258C /* MainViewController.swift */; };
+		79294227283E093A0026258C /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79294226283E093A0026258C /* NewsController.swift */; };
+		798F3506284686840031C2C7 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F3505284686840031C2C7 /* GoalTableViewCell.swift */; };
 		79A09A6D283A270D00D0D297 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A09A6C283A270D00D0D297 /* CalenderViewController.swift */; };
 		79A09A6F283A32AB00D0D297 /* CalenderViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A09A6E283A32AB00D0D297 /* CalenderViewViewController.swift */; };
 		79B430F42833ABE1004F5BEB /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B430F32833ABE1004F5BEB /* TranslateViewController.swift */; };
@@ -43,6 +47,10 @@
 		289C0E8728314047004D029C /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		289C0E8928314060004D029C /* ViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewViewController.swift; sourceTree = "<group>"; };
 		34C2D69951C2A9CCBCD29AD8 /* Pods-Bbetter_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bbetter_Swift.release.xcconfig"; path = "Target Support Files/Pods-Bbetter_Swift/Pods-Bbetter_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		79294222283DF0EC0026258C /* KakaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoViewController.swift; sourceTree = "<group>"; };
+		79294224283DFA590026258C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		79294226283E093A0026258C /* NewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
+		798F3505284686840031C2C7 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		79A09A6C283A270D00D0D297 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		79A09A6E283A32AB00D0D297 /* CalenderViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewViewController.swift; sourceTree = "<group>"; };
 		79B430F32833ABE1004F5BEB /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +100,7 @@
 		286B1D2E282BA3EA00308A66 /* Bbetter_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				79294226283E093A0026258C /* NewsController.swift */,
 				289C0E83282BAD29004D029C /* Goal.storyboard */,
 				289C0E80282BABE5004D029C /* Translate.storyboard */,
 				79B430F32833ABE1004F5BEB /* TranslateViewController.swift */,
@@ -99,14 +108,17 @@
 				79A09A6C283A270D00D0D297 /* CalenderViewController.swift */,
 				79A09A6E283A32AB00D0D297 /* CalenderViewViewController.swift */,
 				289C0E76282BA927004D029C /* News.storyboard */,
+				79294224283DFA590026258C /* MainViewController.swift */,
 				286B1D2F282BA3EA00308A66 /* AppDelegate.swift */,
 				286B1D31282BA3EA00308A66 /* SceneDelegate.swift */,
 				286B1D33282BA3EA00308A66 /* ViewController.swift */,
 				286B1D35282BA3EA00308A66 /* Main.storyboard */,
+				79294222283DF0EC0026258C /* KakaoViewController.swift */,
 				286B1D38282BA3EB00308A66 /* Assets.xcassets */,
 				286B1D3A282BA3EB00308A66 /* LaunchScreen.storyboard */,
 				286B1D3D282BA3EB00308A66 /* Info.plist */,
 				289C0E8528313BAF004D029C /* GoalController.swift */,
+				798F3505284686840031C2C7 /* GoalTableViewCell.swift */,
 				289C0E8728314047004D029C /* EntryViewController.swift */,
 				289C0E8928314060004D029C /* ViewViewController.swift */,
 			);
@@ -240,14 +252,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79294227283E093A0026258C /* NewsController.swift in Sources */,
 				286B1D34282BA3EA00308A66 /* ViewController.swift in Sources */,
+				79294225283DFA590026258C /* MainViewController.swift in Sources */,
 				289C0E8828314047004D029C /* EntryViewController.swift in Sources */,
 				79B430F42833ABE1004F5BEB /* TranslateViewController.swift in Sources */,
 				286B1D30282BA3EA00308A66 /* AppDelegate.swift in Sources */,
 				79A09A6D283A270D00D0D297 /* CalenderViewController.swift in Sources */,
+				798F3506284686840031C2C7 /* GoalTableViewCell.swift in Sources */,
 				289C0E8A28314060004D029C /* ViewViewController.swift in Sources */,
 				289C0E8628313BAF004D029C /* GoalController.swift in Sources */,
 				79A09A6F283A32AB00D0D297 /* CalenderViewViewController.swift in Sources */,
+				79294223283DF0EC0026258C /* KakaoViewController.swift in Sources */,
 				286B1D32282BA3EA00308A66 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
