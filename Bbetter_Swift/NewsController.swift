@@ -7,64 +7,91 @@
 
 import UIKit
 import SwiftSoup
+import Tabman
+import Pageboy
 
-class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
-    private var newsTitle:Elements!
-    
-    @IBOutlet weak var table: UITableView!
+class NewsController:  TabmanViewController{
+    private var newsTab: Array<UIViewController> = []
    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.table.delegate = self
-        self.table.dataSource = self
-        crawl()
-    
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsTitle.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath )
-        let target = newsTitle[indexPath.row]
-         
-        do{
-        cell.textLabel?.text = try "\(newsTitle[indexPath.row].text())"
-        }catch{}
-        return cell
         
-    }
-    
-    
-    func crawl(){
+        let social = UIStoryboard.init(name:"News", bundle: nil).instantiateViewController(withIdentifier: "newsSocial")
         
-            let url = URL(string: "https://news.daum.net")
-          
-            guard let myURL = url else {   return    }
-            
-            do {
-                let html = try String(contentsOf: myURL, encoding: .utf8)
-                let doc: Document = try SwiftSoup.parse(html)
-                let headerTitle = try doc.title()
-                print(headerTitle)
-                
-                newsTitle = try doc.select(".tit_g").select(".link_txt") //.은 클래스
-                for i in newsTitle {
-                    print("title: ", try i.text())
-                    
-                }
-                
-                
-                
-            } catch Exception.Error(let type, let message) {
-                print("Message: \(message)")
-            } catch {
-                print("error")
-            }
+        let politics = UIStoryboard.init(name:"News", bundle: nil).instantiateViewController(withIdentifier: "newsPolitics")
+        
+        let economy = UIStoryboard.init(name:"News", bundle: nil).instantiateViewController(withIdentifier: "newsEconomy")
+        
+        let national = UIStoryboard.init(name:"News", bundle: nil).instantiateViewController(withIdentifier: "newsNational")
+        
+        let culture = UIStoryboard.init(name:"News", bundle: nil).instantiateViewController(withIdentifier: "newsCulture")
+        
+        let it = UIStoryboard.init(name:"News", bundle: nil).instantiateViewController(withIdentifier: "newsIT")
+        
+        newsTab.append(social)
+        newsTab.append(politics)
+        newsTab.append(economy)
+        newsTab.append(national)
+        newsTab.append(culture)
+        newsTab.append(it)
+        
+        self.dataSource = self
+        
+        let tBar = TMBar.ButtonBar()
+        tBar.layout.transitionStyle = .snap
+        //tBar.layout.contentInset = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 20.0)
+        tBar.buttons.customize{(button) in
+            button.tintColor = .gray
+            button.selectedTintColor = .black
+        } // 버튼 클릭시 텍스트 색상
+        tBar.indicator.tintColor = .black
+        tBar.layout.alignment = .centerDistributed
+        tBar.layout.contentMode = .fit
+        
+        addBar(tBar, dataSource: self, at: .top)
     }
+ 
 }
+extension NewsController: PageboyViewControllerDataSource, TMBarDataSource{
+    func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
+        return newsTab.count
+    }
+    
+    func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
+        return newsTab[index]
+    }
+    
+    func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
+        return nil
+    }
+    
+    func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
+        
+        switch index {
+        case 0:
+            return TMBarItem(title: "사회")
+        case 1:
+            return TMBarItem(title: "정치")
+        case 2:
+            return TMBarItem(title: "경제")
+        case 3:
+            return TMBarItem(title: "국제")
+        case 4:
+            return TMBarItem(title: "문화")
+        case 5:
+            return TMBarItem(title: "IT")
+            
+            
+        default:
+            let title = "Page `(index)"
+            return TMBarItem(title: title)
+        }
+    }
+    
+    
+}
+    
+
+
+
 
