@@ -9,4 +9,5 @@ target 'Bbetter_Swift' do
 	pod 'RealmSwift'
 	pod 'SwiftSoup'
 	pod 'KakaoSDK'
+	pod 'Tabman', '~> 2.9'
 end
