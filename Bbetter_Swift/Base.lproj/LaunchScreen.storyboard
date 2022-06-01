@@ -17,10 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bbetter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66S-4w-vti">
-                                <rect key="frame" x="107" y="346" width="200" height="100"/>
+                                <rect key="frame" x="107" y="344" width="200" height="115"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="2bR-hT-bS2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="2bR-hT-bS2"/>
                                     <constraint firstAttribute="height" constant="100" id="Gyn-ox-GoV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="uDI-WS-ADc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="xi4-qZ-bYx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="34"/>
                                 <nil key="textColor"/>
@@ -30,8 +32,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="66S-4w-vti" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="302" id="7lS-L6-toP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="66S-4w-vti" secondAttribute="bottom" constant="386" id="68a-hg-lqn"/>
+                            <constraint firstItem="66S-4w-vti" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Cf-NR-sj4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="66S-4w-vti" secondAttribute="trailing" id="EKU-gu-tJq"/>
                             <constraint firstItem="66S-4w-vti" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="T6P-iT-8dX"/>
+                            <constraint firstItem="66S-4w-vti" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="abL-s5-qdR"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -8,7 +8,13 @@
 import UIKit
 import RealmSwift
 
+
+//class customCell: UITableViewCell{
+//
+//    @IBOutlet weak var DdayLabel: UILabel!
+//}
 class ToDoListItem: Object {
+    @objc dynamic var Dday: String = ""
     @objc dynamic var item: String = ""
     @objc dynamic var date: Date = Date()
 
@@ -16,9 +22,11 @@ class ToDoListItem: Object {
 
 class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    
+    var sectionA : [ToDoListItem] = []
+    var sectionB : [ToDoListItem] = []
     
     @IBOutlet var table: UITableView!
+   
     private var data = [ToDoListItem]()
     private let realm = try! Realm()
     
@@ -36,8 +44,21 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.row].item
+        let cell: GoalTableViewCell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)as! GoalTableViewCell
+        
+        cell.itemLabel?.text = data[indexPath.row].item
+        cell.dateLabel?.text = "\(ViewViewController.dateFormatter.string(from: data[indexPath.row].date))"
+//        var config = cell.defaultContentConfiguration()
+//        config.text = data[indexPath.row].item
+//
+//        config.secondaryText = "\(ViewViewController.dateFormatter.string(from: data[indexPath.row].date))"
+//        config.secondaryTextProperties.color = UIColor.darkGray
+        
+        cell.DdayLabel?.text = data[indexPath.row].Dday
+//
+//        cell.contentConfiguration = config
+
+//        cell.textLabel?.text = "\(data[indexPath.row].Dday) "
         
         return cell
         
@@ -57,7 +78,7 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self?.refresh()
         }
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.title = item.item
+        vc.title = "Bbetter"
         navigationController?.pushViewController(vc, animated: true)
         
         
@@ -72,7 +93,7 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
         
-        vc.title = "New Item"
+        vc.title = "목표 추가"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
     }

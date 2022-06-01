@@ -24,7 +24,7 @@ class CalenderViewController: UIViewController {
  
     static let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter
     }()
     
@@ -51,6 +51,7 @@ class CalenderViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(CalenderViewController.tapItemLabel))
         itemLabel.isUserInteractionEnabled = true
         itemLabel.addGestureRecognizer(tap)
+        self.itemLabel.numberOfLines = 0
 
     }
     
