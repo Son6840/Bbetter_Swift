@@ -157,9 +157,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtN-Ch-AZW">
-                                <rect key="frame" x="46" y="583" width="324" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtN-Ch-AZW">
+                                <rect key="frame" x="46" y="597" width="324" height="45"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="" image="kakao_login_medium_wide">
                                     <color key="titleColor" white="0.93999999999999995" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,9 +177,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqf-d6-GRf">
-                                <rect key="frame" x="60" y="640" width="297" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqf-d6-GRf">
+                                <rect key="frame" x="60" y="654" width="297" height="34"/>
                                 <color key="backgroundColor" white="0.77502101229999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="비회원으로 로그인">
@@ -199,11 +197,17 @@
                         <viewLayoutGuide key="safeArea" id="a0Y-uN-8oI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Cqf-d6-GRf" firstAttribute="leading" secondItem="a0Y-uN-8oI" secondAttribute="leading" constant="60" id="1Gz-P2-UfY"/>
                             <constraint firstItem="8tV-ne-kFg" firstAttribute="top" secondItem="a0Y-uN-8oI" secondAttribute="top" constant="254" id="6nS-0x-9Z1"/>
+                            <constraint firstItem="QtN-Ch-AZW" firstAttribute="leading" secondItem="a0Y-uN-8oI" secondAttribute="leading" constant="46" id="9be-cY-Hpx"/>
                             <constraint firstItem="8tV-ne-kFg" firstAttribute="leading" secondItem="a0Y-uN-8oI" secondAttribute="leading" constant="108" id="EZc-Kw-fgJ"/>
+                            <constraint firstItem="a0Y-uN-8oI" firstAttribute="trailing" secondItem="Cqf-d6-GRf" secondAttribute="trailing" constant="57" id="ZTp-iJ-Jv3"/>
                             <constraint firstItem="a0Y-uN-8oI" firstAttribute="trailing" secondItem="8tV-ne-kFg" secondAttribute="trailing" constant="106" id="d4z-PR-p68"/>
                             <constraint firstItem="8tV-ne-kFg" firstAttribute="leading" secondItem="a0Y-uN-8oI" secondAttribute="leading" constant="108" id="g1Y-Od-rp7"/>
+                            <constraint firstItem="a0Y-uN-8oI" firstAttribute="trailing" secondItem="QtN-Ch-AZW" secondAttribute="trailing" constant="44" id="mBV-wh-4yL"/>
+                            <constraint firstItem="Cqf-d6-GRf" firstAttribute="top" secondItem="QtN-Ch-AZW" secondAttribute="bottom" constant="12" id="onw-DN-Wss"/>
                             <constraint firstItem="a0Y-uN-8oI" firstAttribute="trailing" secondItem="8tV-ne-kFg" secondAttribute="trailing" constant="106" id="wxd-cq-q7V"/>
+                            <constraint firstItem="a0Y-uN-8oI" firstAttribute="bottom" secondItem="Cqf-d6-GRf" secondAttribute="bottom" constant="174" id="yOW-nU-rvD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dD4-sJ-pSq"/>

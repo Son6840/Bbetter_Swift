@@ -14,9 +14,21 @@ class CalenderViewController: UIViewController {
     
     @IBOutlet weak var itemLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
+  
     
     var date = dateFormatter.string(from: Date())
     
+    func addTopBorder(with color: UIColor?, andWidth borderWidth: CGFloat){
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+        border.frame = CGRect(x: 0, y: 0, width: itemLabel.frame.width, height: borderWidth)
+        itemLabel.addSubview(border)
+    }
+
+    
+    
+   
     
     
     
@@ -34,8 +46,10 @@ class CalenderViewController: UIViewController {
         for item2 in list{
             if "\(item2.item)" == ""{
                 itemLabel?.text! = "내용을 입력해주세요"
+                itemLabel.textColor = UIColor.lightGray
             }else{
             itemLabel?.text! = "\(item2.item)"
+            itemLabel.textColor = UIColor.black
         }
         }
     }
@@ -46,12 +60,17 @@ class CalenderViewController: UIViewController {
         let list = realm.objects(diaryItem.self).filter("date == '\(date)'")
         for item2 in list{
             itemLabel?.text! = "\(item2.item)"
+            itemLabel.textColor = UIColor.black
         }
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(CalenderViewController.tapItemLabel))
         itemLabel.isUserInteractionEnabled = true
         itemLabel.addGestureRecognizer(tap)
         self.itemLabel.numberOfLines = 0
+        addTopBorder(with: UIColor.black, andWidth: CGFloat(0.5))
+//        itemLabel.layer.borderWidth = 1
+      
+      
 
     }
     
@@ -84,13 +103,16 @@ class CalenderViewController: UIViewController {
         
         if list.count == 0{
             itemLabel?.text! = "내용을 입력해주세요"
+            itemLabel.textColor = UIColor.lightGray
         }else{
            
             for item2 in list{
                 if "\(item2.item)" == ""{
                     itemLabel?.text! = "내용을 입력해주세요"
+                    itemLabel.textColor = UIColor.lightGray
                 }else{
                 itemLabel?.text! = "\(item2.item)"
+                    itemLabel.textColor = UIColor.black
             }
             }
         }

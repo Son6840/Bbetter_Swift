@@ -26,9 +26,26 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var sectionB : [ToDoListItem] = []
     
     @IBOutlet var table: UITableView!
+    @IBOutlet var addButton: UIButton!
    
     private var data = [ToDoListItem]()
     private let realm = try! Realm()
+    private let floatingButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60  , height: 60))
+        
+        button.backgroundColor = .black
+        let image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
+        button.setImage(image, for: .normal)
+        button.tintColor = .white
+        button.setTitleColor(.white, for: .normal)
+//        button.layer.shadowRadius = 10
+//        button.layer.shadowOpacity = 0.3
+        //corner Radius
+        
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 30
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +53,18 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.table.delegate = self
         self.table.dataSource = self
+        view.addSubview(floatingButton)
+        floatingButton.addTarget(self, action: #selector(didTapAddButton), for: .touchUpInside)
+//        addButton.layer.cornerRadius = addButton.layer.frame.width/2
+//        addButton.frame.size.width = 50
+//        addButton.frame.size.height = 50
+//        addButton.layer.zPosition = 999
+
         
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        floatingButton.frame = CGRect(x: Int(view.frame.size.width) - 70, y: Int(view.frame.size.height) - 100, width:60, height: 60)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,12 +83,25 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        config.secondaryTextProperties.color = UIColor.darkGray
         
         cell.DdayLabel?.text = data[indexPath.row].Dday
+        cell.contentView.isUserInteractionEnabled = false
 //
 //        cell.contentConfiguration = config
 
 //        cell.textLabel?.text = "\(data[indexPath.row].Dday) "
         
         return cell
+        
+    }
+    
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let row = data[indexPath.row]
+//        let height = CGFloat(50 + (row.count/30)*20)
+//        
+//        tableView.estimatedRowHeight = 50
+//        tableView.rowHeight = UITableView.automaticDimension
+//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
         
     }
     
@@ -84,7 +125,7 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    @IBAction func didTapAddButton(){
+    @objc private func didTapAddButton() {
         guard let vc = storyboard?.instantiateViewController(identifier: "enter") as? EntryViewController else {
             return
         }

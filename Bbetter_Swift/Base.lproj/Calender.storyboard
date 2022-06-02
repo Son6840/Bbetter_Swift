@@ -17,18 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="Rvj-1i-ZdN">
-                                <rect key="frame" x="0.0" y="88" width="414" height="374"/>
+                                <rect key="frame" x="5" y="88" width="414" height="369"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <locale key="locale" localeIdentifier="ko"/>
                                 <connections>
                                     <action selector="didDatePickerValueChanged:" destination="YxA-kB-lC8" eventType="valueChanged" id="cHa-PR-XtG"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용을 입력해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH6-RW-ucc">
-                                <rect key="frame" x="10" y="462" width="404" height="400"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용을 입력해주세요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH6-RW-ucc" customClass="PaddingLabel" customModule="Bbetter_Swift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="501" width="414" height="361"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="1hW-D1-pnI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="361" id="1hW-D1-pnI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM Yeonsung" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -36,15 +37,13 @@
                         <viewLayoutGuide key="safeArea" id="fSl-UN-Y1I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Rvj-1i-ZdN" firstAttribute="trailing" secondItem="fSl-UN-Y1I" secondAttribute="trailing" id="4DN-Bt-Bfo"/>
-                            <constraint firstItem="Rvj-1i-ZdN" firstAttribute="leading" secondItem="fSl-UN-Y1I" secondAttribute="leading" id="OJR-Lp-8Xr"/>
-                            <constraint firstAttribute="trailing" secondItem="Rvj-1i-ZdN" secondAttribute="trailing" id="UPs-r2-5ao"/>
-                            <constraint firstItem="Rvj-1i-ZdN" firstAttribute="leading" secondItem="fSl-UN-Y1I" secondAttribute="leading" id="Z4l-Sb-twk"/>
-                            <constraint firstItem="CH6-RW-ucc" firstAttribute="top" secondItem="Rvj-1i-ZdN" secondAttribute="bottom" id="blL-1p-bZa"/>
-                            <constraint firstItem="CH6-RW-ucc" firstAttribute="leading" secondItem="fSl-UN-Y1I" secondAttribute="leading" constant="10" id="g4b-9N-tHj"/>
+                            <constraint firstItem="Rvj-1i-ZdN" firstAttribute="leading" secondItem="fSl-UN-Y1I" secondAttribute="leading" constant="5" id="Sll-tl-2RK"/>
                             <constraint firstItem="fSl-UN-Y1I" firstAttribute="trailing" secondItem="CH6-RW-ucc" secondAttribute="trailing" id="hNj-xW-4oo"/>
                             <constraint firstItem="Rvj-1i-ZdN" firstAttribute="top" secondItem="fSl-UN-Y1I" secondAttribute="top" id="kHn-sP-chV"/>
+                            <constraint firstItem="CH6-RW-ucc" firstAttribute="leading" secondItem="fSl-UN-Y1I" secondAttribute="leading" id="nkC-Fb-9nl"/>
                             <constraint firstItem="fSl-UN-Y1I" firstAttribute="bottom" secondItem="CH6-RW-ucc" secondAttribute="bottom" id="oLs-or-hEc"/>
+                            <constraint firstItem="CH6-RW-ucc" firstAttribute="top" secondItem="Rvj-1i-ZdN" secondAttribute="bottom" constant="44" id="rEH-jd-sVr"/>
+                            <constraint firstItem="Rvj-1i-ZdN" firstAttribute="trailing" secondItem="fSl-UN-Y1I" secondAttribute="trailing" constant="5" id="u9h-Sz-oYC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기" id="Tgr-PJ-sm0"/>
@@ -119,6 +118,11 @@
             <point key="canvasLocation" x="2995.6521739130435" y="-200.22321428571428"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="CH6-RW-ucc">
+            <size key="intrinsicContentSize" width="145.5" height="21"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
