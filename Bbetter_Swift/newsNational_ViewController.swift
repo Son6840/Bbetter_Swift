@@ -6,24 +6,77 @@
 //
 
 import UIKit
+import SwiftSoup
 
-class newsNational_ViewController: UIViewController {
+class newsNational_ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    private var newsTitle:Elements!
+    private var newsTime: Elements!
+    @IBOutlet weak var table: UITableView!
+  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.table.delegate = self
+        self.table.dataSource = self
+        crawl()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return newsTitle.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath ) as! News_TableViewCell
+               // let target = newsTitle[indexPath.row]
+                 
+                do{
+                    cell.naTitle?.text = try "\(newsTitle[indexPath.row].text())"
+                    cell.naTime?.text = try "\(newsTime[indexPath.row].text())"
+                }catch{}
+                return cell
+                
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        do{
+            let url = try newsTitle[indexPath.row].select("a").attr("href")
+            
+            UIApplication.shared.open(URL(string : url)! , options: [:])
+        }
+        catch{
+            
+        }
+    }
+
+    func crawl(){
+            
+                let url = URL(string: "https://news.daum.net/foreign#1")
+              
+                guard let myURL = url else {   return    }
+                
+                do {
+                    let html = try String(contentsOf: myURL, encoding: .utf8)
+                    let doc: Document = try SwiftSoup.parse(html)
+                    let headerTitle = try doc.title()
+                    print(headerTitle)
+                    
+                    newsTitle = try doc.select(".box_news_major").select(".link_txt") //.은 클래스
+                    newsTime = try doc.select(".box_news_major").select(".info_cp") //.은 클래스
+                    for i in newsTime {
+                        print("title: ", try i.text())
+                
+                    }
+                    
+                    
+                    
+                } catch Exception.Error(let type, let message) {
+                    print("Message: \(message)")
+                } catch {
+                    print("error")
+                }
+        }
+
 
 }
