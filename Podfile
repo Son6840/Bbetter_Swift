@@ -10,4 +10,5 @@ target 'Bbetter_Swift' do
 	pod 'SwiftSoup'
 	pod 'KakaoSDK'
 	pod 'Tabman', '~> 2.9'
+	pod 'FSCalendar'
 end
