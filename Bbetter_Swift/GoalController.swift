@@ -88,6 +88,7 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        cell.contentConfiguration = config
 
 //        cell.textLabel?.text = "\(data[indexPath.row].Dday) "
+        //ㅇㅇㅇ
         
         return cell
         
