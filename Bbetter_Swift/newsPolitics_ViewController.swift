@@ -6,14 +6,69 @@
 //
 
 import UIKit
+import SwiftSoup
 
-class newsPolitics_ViewController: UIViewController {
+class newsPolitics_ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
+    private var newsTitle:Elements!
+    private var newsTime: Elements!
+    @IBOutlet weak var table: UITableView!
+  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.table.delegate = self
+        self.table.dataSource = self
+        crawl()
+        
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return newsTitle.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath ) as! News_TableViewCell
+               // let target = newsTitle[indexPath.row]
+                 
+                do{
+                    cell.polTitle?.text = try "\(newsTitle[indexPath.row].text())"
+                    cell.polTime?.text = try "\(newsTime[indexPath.row].text())"
+                }catch{}
+                return cell
+                
+    }
+
+    func crawl(){
+            
+                let url = URL(string: "https://news.daum.net/politics#1")
+              
+                guard let myURL = url else {   return    }
+                
+                do {
+                    let html = try String(contentsOf: myURL, encoding: .utf8)
+                    let doc: Document = try SwiftSoup.parse(html)
+                    let headerTitle = try doc.title()
+                    print(headerTitle)
+                    
+                    newsTitle = try doc.select(".box_news_major").select(".link_txt") //.은 클래스
+                    newsTime = try doc.select(".box_news_major").select(".info_cp") //.은 클래스
+                    for i in newsTime {
+                        print("title: ", try i.text())
+                
+                    }
+                    
+                    
+                    
+                } catch Exception.Error(let type, let message) {
+                    print("Message: \(message)")
+                } catch {
+                    print("error")
+                }
+        }
+
+
     
 
 
