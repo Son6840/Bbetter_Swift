@@ -13,7 +13,8 @@ class newsSocial_ViewController: UIViewController, UITableViewDelegate, UITableV
 
     private var newsTitle:Elements!
     private var newsTime: Elements!
-    private var link: Elements!
+    
+    
     @IBOutlet weak var table: UITableView!
   
     
@@ -35,6 +36,9 @@ class newsSocial_ViewController: UIViewController, UITableViewDelegate, UITableV
                // let target = newsTitle[indexPath.row]
                  
                 do{
+                     var hangulwordPriority: NSParagraphStyle.LineBreakStrategy
+                    
+                    cell.socTitle.lineBreakStrategy = .hangulWordPriority
                     cell.socTitle?.text = try "\(newsTitle[indexPath.row].text())"
                     cell.socTime?.text = try "\(newsTime[indexPath.row].text())"
                 }catch{}
@@ -67,11 +71,7 @@ class newsSocial_ViewController: UIViewController, UITableViewDelegate, UITableV
                     newsTitle = try doc.select(".box_news_major").select(".link_txt") //.은 클래스
                     newsTime = try doc.select(".box_news_major").select(".info_cp") //.은 클래스
                     
-                    
-                    
-                    
-                            
-                    
+            
                     
                     
                 } catch Exception.Error(let type, let message) {

@@ -39,6 +39,17 @@ class newsPolitics_ViewController: UIViewController,UITableViewDelegate, UITable
                 return cell
                 
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        do{
+            let url = try newsTitle[indexPath.row].select("a").attr("href")
+            
+            UIApplication.shared.open(URL(string : url)! , options: [:])
+        }
+        catch{
+            
+        }
+    }
 
     func crawl(){
             
