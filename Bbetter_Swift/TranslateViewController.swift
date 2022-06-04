@@ -22,12 +22,33 @@ class TranslateViewController: UIViewController, UITextFieldDelegate, UITextView
         self.searchText1.delegate = self
         self.searchText1.refreshControl?.addTarget(self, action: #selector(textViewDidChange(_:)), for: .editingChanged) //실시간입력 되었을때 번역함수 호출
         self.textLabel1.numberOfLines = 0
+        placeholderSetting()
+      
         
         
         
 
 
         // Do any additional setup after loading the view.
+    }
+  
+    func placeholderSetting(){
+        searchText1.delegate = self
+        searchText1.text = "번역할 내용을 입력해주세요"
+        searchText1.textColor = UIColor.lightGray
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray{
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty{
+            textView.text = "번역할 내용을 입력해주세요"
+            textView.textColor = UIColor.lightGray
+        }
     }
     struct Papago: Codable {
         let message: Message

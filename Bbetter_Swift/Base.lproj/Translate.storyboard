@@ -56,23 +56,43 @@
                                     <constraint firstAttribute="width" constant="50" id="ap6-hQ-Z2D"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한국어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4n-d3-u9I">
+                                <rect key="frame" x="30" y="257" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSt-Qh-bbo">
+                                <rect key="frame" x="30" y="518" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HOO-Vn-jyd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pHd-tF-xmt" firstAttribute="top" secondItem="HOO-Vn-jyd" secondAttribute="top" constant="73" id="1Og-lS-ftj"/>
                             <constraint firstItem="lfE-mc-pCI" firstAttribute="leading" secondItem="HOO-Vn-jyd" secondAttribute="leading" constant="30" id="23J-qk-Lhi"/>
+                            <constraint firstItem="HOO-Vn-jyd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="V4n-d3-u9I" secondAttribute="trailing" symbolic="YES" id="7fZ-rT-50y"/>
+                            <constraint firstItem="NSt-Qh-bbo" firstAttribute="leading" secondItem="V4n-d3-u9I" secondAttribute="leading" id="83Y-DZ-h7L"/>
+                            <constraint firstItem="NSt-Qh-bbo" firstAttribute="leading" secondItem="lfE-mc-pCI" secondAttribute="leading" id="8xX-Ma-ovZ"/>
+                            <constraint firstItem="lfE-mc-pCI" firstAttribute="top" secondItem="NSt-Qh-bbo" secondAttribute="bottom" constant="5" id="CP7-gn-i9I"/>
                             <constraint firstItem="rKJ-NO-1fE" firstAttribute="top" secondItem="pHd-tF-xmt" secondAttribute="bottom" constant="67" id="DOM-mh-mtK"/>
+                            <constraint firstItem="rKJ-NO-1fE" firstAttribute="top" secondItem="V4n-d3-u9I" secondAttribute="bottom" constant="5" id="DbH-eV-rnB"/>
                             <constraint firstItem="wEY-tQ-54P" firstAttribute="leading" secondItem="HOO-Vn-jyd" secondAttribute="leading" constant="86" id="Egb-u0-5E2"/>
                             <constraint firstItem="wEY-tQ-54P" firstAttribute="top" secondItem="HOO-Vn-jyd" secondAttribute="top" constant="86" id="EuE-ox-Vvs"/>
                             <constraint firstItem="lfE-mc-pCI" firstAttribute="trailing" secondItem="rKJ-NO-1fE" secondAttribute="trailing" constant="-2" id="PTe-5r-CzF"/>
                             <constraint firstItem="rKJ-NO-1fE" firstAttribute="leading" secondItem="yjq-q7-1Fz" secondAttribute="leading" constant="30" id="RAQ-xS-bY7"/>
                             <constraint firstItem="HOO-Vn-jyd" firstAttribute="bottom" secondItem="lfE-mc-pCI" secondAttribute="bottom" constant="173" id="RhU-tT-aX8"/>
+                            <constraint firstItem="pHd-tF-xmt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wEY-tQ-54P" secondAttribute="trailing" constant="8" symbolic="YES" id="W0Z-FX-NEj"/>
                             <constraint firstItem="bT9-Bb-Wwb" firstAttribute="top" secondItem="HOO-Vn-jyd" secondAttribute="top" constant="86" id="YsB-oY-Z94"/>
                             <constraint firstItem="rKJ-NO-1fE" firstAttribute="top" secondItem="HOO-Vn-jyd" secondAttribute="top" constant="195" id="aS2-sh-1aC"/>
                             <constraint firstAttribute="trailing" secondItem="rKJ-NO-1fE" secondAttribute="trailing" constant="32" id="g3v-US-3m7"/>
                             <constraint firstItem="pHd-tF-xmt" firstAttribute="leading" secondItem="HOO-Vn-jyd" secondAttribute="leading" constant="182" id="jUl-Cs-Sd7"/>
+                            <constraint firstItem="bT9-Bb-Wwb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pHd-tF-xmt" secondAttribute="trailing" constant="8" symbolic="YES" id="qQ2-IH-sU8"/>
                             <constraint firstItem="HOO-Vn-jyd" firstAttribute="trailing" secondItem="bT9-Bb-Wwb" secondAttribute="trailing" constant="86" id="sUn-gy-vmB"/>
+                            <constraint firstItem="HOO-Vn-jyd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NSt-Qh-bbo" secondAttribute="trailing" symbolic="YES" id="uLR-rI-EJQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="번역기" id="q9d-Bi-VSX"/>
