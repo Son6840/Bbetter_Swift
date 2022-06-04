@@ -43,11 +43,15 @@ class CalenderViewViewController: UIViewController, UITextFieldDelegate, UITextV
         itemTextField.becomeFirstResponder()
         itemTextField.delegate = self
        
-        dateLabel?.text! = self.dataDate
+//        dateLabel?.text! = self.dataDate
         itemTextField?.text! = self.labelItem
 
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .done, target: self, action: #selector(didTapCheckButton))
+        let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue]
+        let underlineAttributedString = NSAttributedString(string: "\(self.dataDate)", attributes: underlineAttribute)
+        dateLabel.attributedText = underlineAttributedString
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

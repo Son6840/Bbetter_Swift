@@ -26,7 +26,7 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var sectionB : [ToDoListItem] = []
     
     @IBOutlet var table: UITableView!
-    @IBOutlet var addButton: UIButton!
+    
    
     private var data = [ToDoListItem]()
     private let realm = try! Realm()
@@ -124,6 +124,45 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
     }
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        // 오른쪽에 만들기
+//
+//
+//        let delete = UIContextualAction(style: .normal, title: "삭제") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
+//            print("삭제 클릭 됨")
+//
+//            success(true)
+//        }
+//        delete.backgroundColor = .systemRed
+//
+//        //actions배열 인덱스 0이 오른쪽에 붙어서 나옴
+//        return UISwipeActionsConfiguration(actions: [delete])
+//    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+           
+           if editingStyle == .delete {
+               
+               data.remove(at: indexPath.row)
+               tableView.deleteRows(at: [indexPath], with: .fade)
+               
+           } else if editingStyle == .insert {
+               
+           }
+       }
+    
+//    @objc private func didTapDelete() {
+//        guard let myItem = self.item else{
+//            return
+//        }
+//        realm.beginWrite()
+//        realm.delete(myItem)
+//        try! realm.commitWrite()
+//        
+//        deletionHandler?()
+//        navigationController?.popToRootViewController(animated: true)
+//        
+//    }
+
     
     @objc private func didTapAddButton() {
         guard let vc = storyboard?.instantiateViewController(identifier: "enter") as? EntryViewController else {

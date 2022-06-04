@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.6.1)
+  - FSCalendar (2.8.4)
   - KakaoSDK (2.9.1):
     - KakaoSDKAuth (= 2.9.1)
     - KakaoSDKCommon (= 2.9.1)
@@ -43,6 +44,7 @@ PODS:
     - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
+  - FSCalendar
   - KakaoSDK
   - RealmSwift
   - SwiftSoup
@@ -51,6 +53,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - FSCalendar
     - KakaoSDK
     - KakaoSDKAuth
     - KakaoSDKCommon
@@ -68,6 +71,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   KakaoSDK: 863b75c045a01065faf1dd67393b62dfe2b4ce3a
   KakaoSDKAuth: 8ec514e64f57f405735e92483fdae1cc2830d351
   KakaoSDKCommon: c4b08131fdba6770a280ffe83916048174f329bf
@@ -83,6 +87,6 @@ SPEC CHECKSUMS:
   SwiftSoup: 7589ceac3b38cef742a96981cfe2b14ba55ce1e3
   Tabman: 447a50447ed2869c39ab3b1a779327e43e067c4e
 
-PODFILE CHECKSUM: aad33a5f35a2b1e45c19e8388e17fbe823d4c4af
+PODFILE CHECKSUM: dc1584173b749d746cce1b2682a28eb263fbe541
 
 COCOAPODS: 1.11.3

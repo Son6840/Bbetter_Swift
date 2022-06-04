@@ -160,16 +160,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItI-7W-sbd">
-                                <rect key="frame" x="20" y="105" width="374" height="21"/>
+                                <rect key="frame" x="20" y="122" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrm-a5-TWA">
-                                <rect key="frame" x="176" y="76" width="175" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrm-a5-TWA">
+                                <rect key="frame" x="0.0" y="159" width="414" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" red="0.91874885559999997" green="0.2772486508" blue="0.36077016589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -178,10 +177,13 @@
                         <constraints>
                             <constraint firstItem="cbs-VB-U4C" firstAttribute="trailing" secondItem="YEB-SA-WZp" secondAttribute="trailing" constant="20" id="FRc-Np-iqC"/>
                             <constraint firstItem="ItI-7W-sbd" firstAttribute="leading" secondItem="cbs-VB-U4C" secondAttribute="leading" constant="20" id="Gok-Qx-gry"/>
-                            <constraint firstItem="ItI-7W-sbd" firstAttribute="top" secondItem="YEB-SA-WZp" secondAttribute="bottom" constant="30" id="I8E-yD-aQv"/>
+                            <constraint firstItem="ItI-7W-sbd" firstAttribute="top" secondItem="YEB-SA-WZp" secondAttribute="bottom" constant="47" id="I8E-yD-aQv"/>
+                            <constraint firstItem="qrm-a5-TWA" firstAttribute="top" secondItem="ItI-7W-sbd" secondAttribute="bottom" constant="16" id="YtK-E2-nxH"/>
+                            <constraint firstItem="qrm-a5-TWA" firstAttribute="leading" secondItem="cbs-VB-U4C" secondAttribute="leading" id="eCT-wE-YTB"/>
                             <constraint firstItem="cbs-VB-U4C" firstAttribute="trailing" secondItem="ItI-7W-sbd" secondAttribute="trailing" constant="20" id="f9K-IC-GwD"/>
                             <constraint firstItem="YEB-SA-WZp" firstAttribute="top" secondItem="cbs-VB-U4C" secondAttribute="top" constant="10" id="ff1-Ak-yXW"/>
                             <constraint firstItem="YEB-SA-WZp" firstAttribute="leading" secondItem="cbs-VB-U4C" secondAttribute="leading" constant="20" id="naC-ux-si8"/>
+                            <constraint firstItem="cbs-VB-U4C" firstAttribute="trailing" secondItem="qrm-a5-TWA" secondAttribute="trailing" id="uHK-Zr-IiE"/>
                         </constraints>
                     </view>
                     <connections>
@@ -192,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ7-Fv-MXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4953.6231884057979" y="427.90178571428572"/>
+            <point key="canvasLocation" x="5732" y="-228"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tdO-Sb-Rz4">
