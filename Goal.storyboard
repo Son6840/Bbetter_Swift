@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--목표-->
+        <!--Goal Controller-->
         <scene sceneID="00m-LO-cey">
             <objects>
                 <viewController storyboardIdentifier="goal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fPm-5D-Uxu" customClass="GoalController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                         <viewLayoutGuide key="safeArea" id="sLI-TN-yc4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="목표" id="aUv-vW-Rum"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="aUv-vW-Rum"/>
                     <connections>
                         <outlet property="table" destination="JjR-3h-nAL" id="4g1-hb-hCX"/>
                     </connections>
