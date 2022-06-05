@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xfu-6i-3QZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -18,10 +18,11 @@
                         <viewLayoutGuide key="safeArea" id="gEY-eL-gA2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wjj-Zg-0vZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48m-0E-Ely" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-657" y="-278"/>
+            <point key="canvasLocation" x="1241" y="-536"/>
         </scene>
         <!--News Social View Controller-->
         <scene sceneID="jeb-Ts-9Ka">
@@ -85,13 +86,14 @@
                             <constraint firstItem="fv1-hb-ZNS" firstAttribute="leading" secondItem="CTD-IK-DRd" secondAttribute="leading" id="erQ-hW-tc1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="59Q-Ya-ykX"/>
                     <connections>
                         <outlet property="table" destination="fv1-hb-ZNS" id="MLI-4n-6Wl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sM0-Yb-8uZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-659.4202898550725" y="376.33928571428572"/>
+            <point key="canvasLocation" x="250.72463768115944" y="376.33928571428572"/>
         </scene>
         <!--New Economy View Controller-->
         <scene sceneID="Ze2-cg-p2g">
@@ -160,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2x-1f-bj3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="376"/>
+            <point key="canvasLocation" x="1886.9565217391305" y="375.66964285714283"/>
         </scene>
         <!--News Politics View Controller-->
         <scene sceneID="Ihi-7b-qMf">
@@ -229,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3u-hd-QyC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="376"/>
+            <point key="canvasLocation" x="1084.0579710144928" y="375.66964285714283"/>
         </scene>
         <!--New Culture View Controller-->
         <scene sceneID="LXD-Es-ZdX">
