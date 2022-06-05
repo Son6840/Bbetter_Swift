@@ -8,6 +8,7 @@
 import UIKit
 import KakaoSDKAuth
 import KakaoSDKCommon
+import RealmSwift
 
 
 
@@ -15,16 +16,29 @@ import KakaoSDKCommon
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-   
+    private let realm = try! Realm()
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         KakaoSDK.initSDK(appKey: "d70143edcbca3e186095fcd4a5357940")
+        if #available(iOS 11.0 , *) {
+               // 경고창, 배지, 사운드를 사용하는 알림 환경 정보를 생성하고, 사용자 동의 여부 창을 실행
+               let notiCenter = UNUserNotificationCenter.current()
+               notiCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (didAllow, e) in }
+           } else {
+               // 경고창, 배지, 사운드를 사용하는 알림 환경 정보를 생성하고, 이를 애플리케이션에 저장
+               let setting = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+               application.registerUserNotificationSettings(setting)
+           }
+                UNUserNotificationCenter.current().delegate = self
+        
+              
         // Override point for customization after application launch.
         return true
     }
-
+ 
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -40,5 +54,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+
+
 }
 
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+//     앱이 실행 중 일때 처리하는 메서드
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        completionHandler([.badge, .sound, .banner])
+//    }
+//    
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void){
+//        let _ = response.notification.request.content.userInfo
+//        completionHandler()
+//    }
+   
+  
+}
