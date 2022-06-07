@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--일기-->
+        <!--Calender View Controller-->
         <scene sceneID="JOc-jU-qXK">
             <objects>
                 <viewController storyboardIdentifier="calender" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YxA-kB-lC8" customClass="CalenderViewController" customModule="Bbetter_Swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQ3-8s-7r0" customClass="FSCalendar">
-                                <rect key="frame" x="5" y="88" width="404" height="452"/>
+                                <rect key="frame" x="5" y="50" width="404" height="490"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -40,16 +40,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lQ3-8s-7r0" firstAttribute="leading" secondItem="fSl-UN-Y1I" secondAttribute="leading" constant="5" id="2Sb-Yz-0bI"/>
-                            <constraint firstItem="lQ3-8s-7r0" firstAttribute="top" secondItem="fSl-UN-Y1I" secondAttribute="top" id="KY3-G0-A7E"/>
+                            <constraint firstItem="lQ3-8s-7r0" firstAttribute="top" secondItem="fSl-UN-Y1I" secondAttribute="top" constant="-38" id="KY3-G0-A7E"/>
                             <constraint firstItem="fSl-UN-Y1I" firstAttribute="trailing" secondItem="lQ3-8s-7r0" secondAttribute="trailing" constant="5" id="LRp-Ii-klb"/>
                             <constraint firstItem="fSl-UN-Y1I" firstAttribute="trailing" secondItem="CH6-RW-ucc" secondAttribute="trailing" id="hNj-xW-4oo"/>
                             <constraint firstItem="CH6-RW-ucc" firstAttribute="leading" secondItem="fSl-UN-Y1I" secondAttribute="leading" id="nkC-Fb-9nl"/>
                             <constraint firstItem="fSl-UN-Y1I" firstAttribute="bottom" secondItem="CH6-RW-ucc" secondAttribute="bottom" id="oLs-or-hEc"/>
                             <constraint firstItem="CH6-RW-ucc" firstAttribute="top" secondItem="lQ3-8s-7r0" secondAttribute="bottom" constant="8" id="x1c-An-z3Z"/>
-                            <constraint firstItem="lQ3-8s-7r0" firstAttribute="centerY" secondItem="KOi-9M-qs0" secondAttribute="centerY" constant="-134" id="zVI-ce-6Ld"/>
+                            <constraint firstItem="lQ3-8s-7r0" firstAttribute="centerY" secondItem="KOi-9M-qs0" secondAttribute="centerY" constant="-153" id="zVI-ce-6Ld"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="일기" id="Tgr-PJ-sm0"/>
+                    <navigationItem key="navigationItem" id="Tgr-PJ-sm0"/>
                     <connections>
                         <outlet property="fsCalender" destination="lQ3-8s-7r0" id="f6H-hu-EsR"/>
                         <outlet property="itemLabel" destination="CH6-RW-ucc" id="aDo-WN-Juv"/>
@@ -57,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1n-Os-5Qw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3905.7971014492755" y="-200.22321428571428"/>
+            <point key="canvasLocation" x="3913.04347826087" y="-193.52678571428569"/>
         </scene>
         <!--Calender View View Controller-->
         <scene sceneID="uab-Hm-9dr">

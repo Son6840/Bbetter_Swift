@@ -54,7 +54,7 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }()
     
     override func viewDidLoad() {
-        self.navigationItem.title = "뉴스"
+     
         super.viewDidLoad()
         data = realm.objects(ToDoListItem.self).map({ $0 })
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
