@@ -20,6 +20,7 @@ class newsSocial_ViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     override func viewDidLoad() {
+        self.navigationItem.title = "뉴스"
         super.viewDidLoad()
         self.table.delegate = self
         self.table.dataSource = self

@@ -9,6 +9,9 @@ import UIKit
 import RealmSwift
 
 
+public var deletionHandler: (() -> Void )?
+
+
 //class customCell: UITableViewCell{
 //
 //    @IBOutlet weak var DdayLabel: UILabel!
@@ -24,12 +27,15 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
    
     var sectionA : [ToDoListItem] = []
     var sectionB : [ToDoListItem] = []
+
+
     
     @IBOutlet var table: UITableView!
     
    
     private var data = [ToDoListItem]()
     private let realm = try! Realm()
+    
     private let floatingButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60  , height: 60))
         
@@ -48,6 +54,7 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }()
     
     override func viewDidLoad() {
+        self.navigationItem.title = "뉴스"
         super.viewDidLoad()
         data = realm.objects(ToDoListItem.self).map({ $0 })
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -59,9 +66,15 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        addButton.frame.size.width = 50
 //        addButton.frame.size.height = 50
 //        addButton.layer.zPosition = 999
+       
+        
+        
+ 
 
         
     }
+
+ 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         floatingButton.frame = CGRect(x: Int(view.frame.size.width) - 70, y: Int(view.frame.size.height) - 100, width:60, height: 60)
@@ -114,6 +127,8 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
         guard let vc = storyboard?.instantiateViewController(identifier: "view") as? ViewViewController else{
             return
         }
+        print(data[indexPath.row])
+        
         
         vc.item = item
         vc.deletionHandler = { [weak self] in
@@ -142,9 +157,14 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
            
            if editingStyle == .delete {
-               
+               realm.beginWrite()
+               realm.delete(data[indexPath.row])
+               try! realm.commitWrite()
+               deletionHandler?()
                data.remove(at: indexPath.row)
                tableView.deleteRows(at: [indexPath], with: .fade)
+               
+            
                
            } else if editingStyle == .insert {
                
@@ -152,16 +172,15 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
        }
     
 //    @objc private func didTapDelete() {
-//        guard let myItem = self.item else{
+//        guard let myItem = item5 else{
 //            return
 //        }
 //        realm.beginWrite()
 //        realm.delete(myItem)
 //        try! realm.commitWrite()
-//        
+//
 //        deletionHandler?()
-//        navigationController?.popToRootViewController(animated: true)
-//        
+//
 //    }
 
     
@@ -187,5 +206,6 @@ class GoalController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             
         }
+
 
 

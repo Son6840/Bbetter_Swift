@@ -18,6 +18,7 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         @IBOutlet var dDay: UILabel!
         
         private let realm = try! Realm()
+ 
         public var completionHandler: (() -> Void)?
     
     static let dateFormatter: DateFormatter = {
@@ -35,6 +36,7 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
             datePicker.setDate(Date(), animated: true)
             textField.placeholder = "디데이 제목을 입력하세요."
             dDay?.text! = "D-DAY"
+          
             
            
             
